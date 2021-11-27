@@ -28,6 +28,10 @@ io.on('connect', socket => {
     socket.on('VerifyUser', (username, password) => {
         User.VerifyUser(socket, username, password);
     });
+
+    socket.on('RegisterNewUser', (username, password) => {
+        User.RegisterUser(socket, username, password);
+    });
     //<== Login emits
 })
 

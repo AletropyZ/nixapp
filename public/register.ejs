@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Login Page</title>
+    <title>Register Page</title>
 </head>
 <body>
     <header>
@@ -19,9 +19,9 @@
         </nav>
     </header>
 
-    <form class="login-box" action="/login">
+    <form class="login-box" action="/registro">
         <label class="error-text">Nome de usuário desconhecido!</label>
-        <h1>Login</h1>
+        <h1>Registro</h1>
 
 
         <div class="textbox">
@@ -32,11 +32,10 @@
             <input required type="password" placeholder="Password" name="password" autocomplete="off">
         </div>
 
-        <input class="btn" type="submit" value="Log-In">
-        <p>Ainda não fez login? clique <a href="/registro">aqui</a> para se registrar!</p>
+        <input class="btn" type="submit" value="Registrar-se">
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>

@@ -13,7 +13,16 @@ function VerifyUser(socket, username, password)
     return socket.emit('userVerified', username);
 }
 
+function RegisterUser(socket, username, password)
+{
+    if(db.has(`user.${username}`)) return socket.emit('errorMessage', 'Usuário já existe!');
+    db.set(`user.${username}`, '');
+    db.set(`user.${username}.password`, password);
+    return socket.emit('Registered');
+}
+
 module.exports = {
     sendConsoleMessage,
-    VerifyUser
+    VerifyUser,
+    RegisterUser
 }

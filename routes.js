@@ -9,6 +9,10 @@ Router.get('/login', (req,res) => {
     res.render('login');
 });
 
+Router.get('/registro', (req,res) => {
+    res.render('register');
+});
+
 Router.get('/inventario', (req,res) => {
     res.render('inventory');
 });

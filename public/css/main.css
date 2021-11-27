@@ -8,7 +8,7 @@
     background-color: #323232;
 }
 
-li, a, .lgn {
+li, li a, .lgn {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -87,6 +87,20 @@ header {
     border-bottom: 6px solid #ff933b;
     margin-bottom: 50px;
     padding: 13px 0;
+}
+
+.login-box p, a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.login-box a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    color: #0088a9;
 }
 
 .textbox {
