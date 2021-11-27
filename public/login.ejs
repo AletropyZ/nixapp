@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">NixApp</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/inventario">Inventário</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form class="login-box" action="/login">
+        <label class="error-text">Nome de usuário desconhecido!</label>
+        <h1>Login</h1>
+
+
+        <div class="textbox">
+            <input required type="text" placeholder="Username" name="username" autocomplete="off">
+        </div>
+
+        <div class="textbox">
+            <input required type="password" placeholder="Password" name="password" autocomplete="off">
+        </div>
+
+        <input class="btn" type="submit" value="Log-In">
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
