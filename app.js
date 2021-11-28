@@ -77,6 +77,4 @@ io.on('connect', socket => {
 })
 
 //<== Conexão e tratamento de dados dos sockets //
-
-client.login(discordConfig.token);
 server.listen(PORT, () => console.log(`O servidor foi iniciado em http://localhost:${PORT}`));
