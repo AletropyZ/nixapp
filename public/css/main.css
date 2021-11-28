@@ -148,3 +148,36 @@ header {
     background-color: #a50e0e;
     border-radius: 8px;
 }
+
+.user-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    border: 1px solid #ff933b;
+    border-radius: 15px;
+    width: 70%;
+    height: 300px;
+    text-align: center;
+}
+
+.user-info h1 {
+    position: relative;
+    float: left;
+    color: #b43131;
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 25%;
+    margin-top: 15px;
+    padding: 25px;
+    border: 2px solid #656565;
+    border-radius: 15px;
+    background-color: #656565;
+}
+
+.user-info h1.blue-text {
+    color: #27badf;
+    margin-left: 0;
+    margin-right: 25%;
+    float: right;
+}

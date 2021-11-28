@@ -28,8 +28,8 @@ socket.on('errorMessage', (msg) => {
 });
 
 socket.on('userVerified', (nickname) => {
-    localStorage.setItem('logged', true);
-    localStorage.setItem('user', nickname);
+    sessionStorage.setItem('logged', true);
+    sessionStorage.setItem('user', nickname);
     window.location.href = '/';
 });
 

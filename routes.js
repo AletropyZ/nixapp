@@ -21,4 +21,9 @@ Router.get('/sobre', (req,res) => {
     res.render('about');
 });
 
+Router.get('/dev', (req,res) => {
+    res.render('dev');
+});
+
+
 module.exports = Router;

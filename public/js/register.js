@@ -36,6 +36,8 @@ socket.on('Registered', () => {
     window.location.href = '/login';
 });
 
+if(sessionStorage.getItem('user') != 'aletropy') window.location.href = '/'
+
 if(VerifyParams())
 {
     socket.emit('RegisterNewUser', Params.username, Params.password);
