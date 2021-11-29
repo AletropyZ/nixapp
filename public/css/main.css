@@ -162,9 +162,10 @@ header {
 }
 
 .user-info h1 {
+    cursor: pointer;
     position: relative;
     float: left;
-    color: #b43131;
+    color: #ebb84c;
     font-weight: 700;
     font-size: 40px;
     margin-left: 25%;
@@ -180,4 +181,78 @@ header {
     margin-left: 0;
     margin-right: 25%;
     float: right;
+}
+
+.edit-box {
+    position: absolute;
+    left: -250px;
+    width: 250px;
+    height: 350px;
+    border: 5px solid #0088a9;
+    background-color: #005a70;
+    border-radius: 5px;
+    align-items: center;
+    transition: .8s all;
+}
+
+.edit-box h1 {
+    text-align: center;
+    background-color: #005a70;
+    color: white;
+    font-weight: 500;
+}
+
+.edit-box label {
+    background-color: #005a70;
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.edit-box input {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    background-color: #005a70;
+    text-align: center;
+    margin: 8px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 0;
+}
+
+.edit-box p {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: #005a70;
+    cursor: pointer;
+}
+
+.edit-box button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    background-color: #005a70;
+    text-align: center;
+    margin-top: 40px;
+    border: 1px solid #323232;
+    border-radius: 20px;
+    width: 50%;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.edit-box button:hover {
+    color: #ff933b;
+    background-color: #323232;
 }
