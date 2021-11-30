@@ -64,14 +64,16 @@ io.on('connect', socket => {
         User.GetUserInfo(socket, username);
     });
 
-    socket.on('UpdateUserStats', (username, stats) => {
-        User.UpdateUserStats(socket, username, stats);
+    socket.on('UpdateUserInfo', (username, info) => {
+        User.UpdateUserInfo(socket, username, info);
     });
     //<== User Emits
 
     //Dev User Emits ==>
 
-    
+    socket.on('ResetUserInfo', (username) => {
+        DevUser.ResetUserInfo(socket, username);
+    });
 
     //<== Dev User Emits
 })

@@ -22,24 +22,31 @@ function RegisterUser(socket, username, password)
     db.set(`user.${username}`, '');
     db.set(`user.${username}.password`, password);
 
-    db.set(`user.${username}.stats`, {vida: 0, umbra: 0, maxVida: 0});
+    db.set(`user.${username}.info`, {
+        vida: 0,
+        umbra: 0,
+        maxVida: 0,
+        player:{
+            username: 'Player'
+        }
+    });
     return socket.emit('Registered');
 }
 
-//Pega os status do usuário
+//Pega as informações do usuário
 function GetUserInfo(socket, username)
 {
     if(!db.has(`user.${username}`)) return;
-    let STATS = db.get(`user.${username}.stats`);
-    socket.emit('LoadUserInfo', STATS);
+    let INFO = db.get(`user.${username}.info`);
+    socket.emit('LoadUserInfo', INFO);
 }
 
-//Atualiza os status do usuário
-function UpdateUserStats(socket, username, stats)
+//Atualiza as informações do usuário
+function UpdateUserInfo(socket, username, info)
 {
     if(!db.has(`user.${username}`)) return;
-    db.set(`user.${username}.stats`, stats);
-    socket.emit('LoadUserInfo', stats);
+    db.set(`user.${username}.info`, info);
+    socket.emit('LoadUserInfo', info);
 }
 
 module.exports = {
@@ -47,5 +54,5 @@ module.exports = {
     VerifyUser,
     RegisterUser,
     GetUserInfo,
-    UpdateUserStats
+    UpdateUserInfo
 }

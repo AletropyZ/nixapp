@@ -34,10 +34,18 @@
         <label>Umbra Atual: </label><input type="number" id="edit-umbra-value" placeholder="Valor" autocomplete="off">
         <button onclick="EditStat(1)">Aplicar</button>
     </div>
+    <div id="name-edit" class="edit-box">
+        <p onclick="ShowEditStats(2, 0)">X</p>
+        <h1>Nome do Char</h1>
+        <label>Nome Atual: </label><input type="text" id="edit-name-value" placeholder="Nome" autocomplete="off">
+        <button onclick="EditStat(2)">Aplicar</button>
+    </div>
 
     <div class="user-info">
-        <h1 onclick="ShowEditStats(0, 1)" id="vida">Vida: </h1>
-        <h1 onclick="ShowEditStats(1, 1)" class="blue-text" id="umbra">Umbra: </h1>
+        <h1 class="name-show" id="player-username" onclick="ShowEditStats(2, 1)"></h1>
+        <img id="icon-image" src="">
+        <h1 onclick="ShowEditStats(0, 1)" class="show-stats" id="vida">Vida: </h1>
+        <h1 onclick="ShowEditStats(1, 1)" class="blue-text show-stats" id="umbra">Umbra: </h1>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>

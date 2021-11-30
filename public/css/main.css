@@ -153,22 +153,23 @@ header {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     border: 1px solid #ff933b;
     border-radius: 15px;
-    width: 70%;
-    height: 300px;
+    width: 50%;
+    min-height: 300px;
     text-align: center;
 }
 
-.user-info h1 {
+.user-info h1.show-stats {
     cursor: pointer;
     position: relative;
+    display: inline;
     float: left;
     color: #ebb84c;
     font-weight: 700;
     font-size: 40px;
-    margin-left: 25%;
+    margin-left: 10%;
     margin-top: 15px;
     padding: 25px;
     border: 2px solid #656565;
@@ -179,8 +180,36 @@ header {
 .user-info h1.blue-text {
     color: #27badf;
     margin-left: 0;
-    margin-right: 25%;
+    margin-right: 10%;
     float: right;
+}
+
+.user-info h1.name-show {
+    position: relative;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    width: fit-content;
+    border-bottom: 3px solid #ff933b;
+    border-radius: 5px;
+}
+
+#icon-image {
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translate(-50%);
+    border: 6px solid #27badf;
+    border-radius: 50%;
+    margin-bottom: 60px;
+    width: 320px;
+    height: 320px;
 }
 
 .edit-box {
